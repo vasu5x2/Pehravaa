@@ -17,6 +17,13 @@ const shopOrderRouter = require("./routes/shop/order-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
 
+app.use(cors(
+  {
+    origin : [],
+    methods : ["POST","GET"],
+    credentials : true
+  }
+));
 // Connect to the database
 mongoose
   .connect(process.env.MONGO_URI)
