@@ -2,8 +2,7 @@
 import axios from "axios";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const base = process.env.REACT_APP_API_URL || "http://localhost:5001";
-
+const base = import.meta.env.VITE_API_URL || "http://localhost:5001";
 
 const initialState = {
   cartItems: [],

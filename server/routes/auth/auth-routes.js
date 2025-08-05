@@ -8,6 +8,11 @@ const {
 
 const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.status(200).json({ message: "Auth route working!" });
+});
+
+
 router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.post("/logout", logoutUser);

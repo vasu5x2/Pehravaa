@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 import axios from "axios";
 import { Skeleton } from "../ui/skeleton";
 
-var base = process.env.REACT_APP_API_URL || "http://localhost:5001";
+const base = import.meta.env.VITE_API_URL || "http://localhost:5001";
 
 function ProductImageUpload({
   imageFile,
