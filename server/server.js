@@ -27,21 +27,14 @@ mongoose
 const app = express();
 const PORT = 5001;
 
-
 app.use(
   cors({
-    origin: process.env.CORS_ORIGIN,
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
-      "Cache-Control",
-      "Expires",
-      "Pragma",
-    ],
+    origin: true,
     credentials: true,
   })
 );
+
+app.options("*", cors());
 
 app.use(cookieParser());
 app.use(express.json());
