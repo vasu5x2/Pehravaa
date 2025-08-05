@@ -6,6 +6,8 @@ import { Button } from "../ui/button";
 import axios from "axios";
 import { Skeleton } from "../ui/skeleton";
 
+var base = process.env.REACT_APP_API_URL || "http://localhost:5001";
+
 function ProductImageUpload({
   imageFile,
   setImageFile,
@@ -50,7 +52,7 @@ function ProductImageUpload({
     const data = new FormData();
     data.append("my_file", imageFile);
     const response = await axios.post(
-      "http://localhost:5000/api/admin/products/upload-image",
+      `${base}/api/admin/products/upload-image`,
       data
     );
     console.log(response, "response");
