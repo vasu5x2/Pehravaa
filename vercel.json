@@ -7,7 +7,7 @@
       "destination": "/index.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/client",
       "destination": "/index.html"
     }
   ]
